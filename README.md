@@ -24,6 +24,10 @@ And view at GCP web console.
 
 Creating template `immutable.json` with user variables `variables-reddit.json`, additional files at `files` directory.
 
+### An additional task. Create instance with script & gcloud
+
+Use shell script `./config-scripts/create-reddit-vm.sh`.
+
 ## homework 4
 
 ### The main task. Create scripts
