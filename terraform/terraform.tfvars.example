@@ -1,9 +1,5 @@
 project = "name_of_project"
-
 public_key_path = "full/path/to/public_key"
-
 disk_image = "name_of_base_image"
-
 connection_key = "full/path/to/private_key"
-
 zone = "zone"
