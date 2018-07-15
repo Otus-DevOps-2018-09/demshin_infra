@@ -1,5 +1,5 @@
 project = "name_of_project"
-public_key_path = "full/path/to/public_key"
+public_key_path = "~/.ssh/id_rsa.pub"
 disk_image = "name_of_base_image"
-connection_key = "full/path/to/private_key"
+connection_key = "~/.ssh/id_rsa"
 zone = "zone"
