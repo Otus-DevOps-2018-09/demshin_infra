@@ -7,7 +7,7 @@ provider "google" {
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "g1-small"
-  zone         = "europe-west3-b"
+  zone         = "${var.zone}"
 
   boot_disk {
     initialize_params {
@@ -30,7 +30,7 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "demshin"
     agent       = false
-    private_key = "${file("~/.ssh/id_rsa")}"
+    private_key = "${file(var.connection_key)}"
   }
 
   provisioner "file" {
