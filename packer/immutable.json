@@ -29,7 +29,13 @@
         },
         {
             "type": "shell",
-            "inline": "sudo cp /tmp/reddit.system /etc/systemd/system/reddit.system"
+            "script": "files/reddit.system.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "files/reddit.enable.service.sh",
+            "execute_command": "sudo {{.Path}}"
         },
         {
             "type": "shell",
