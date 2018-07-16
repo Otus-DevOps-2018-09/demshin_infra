@@ -1,0 +1,13 @@
+[Unit]
+Description=Reddit app
+Requires=network-online.target
+After=network.target
+
+[Service]
+User=demshin
+WorkingDirectory=/home/demshin/reddit
+ExecStart=/usr/local/bin/puma -d
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -2,15 +2,41 @@
 
 demshin Infra repository
 
+## homework Packer
+
+### The main task. Template User Variables
+
+- Creating template with user variables (with default values and reqired values).
+- Creating `variables.json.example`, set variables at `variables.json` (only local, not at remote git repository)
+- Add some other options of GCP.
+
+To check run commands:
+
+```bash
+cd packer
+packer validate -var-file=variables.json ubuntu16.json
+packer build -var-file=variables.json ubuntu16.json
+```
+
+And view at GCP web console.
+
+### An additional task. Immutable infrastructure
+
+Creating template `immutable.json` with user variables `variables-reddit.json`, additional files at `files` directory.
+
+### An additional task. Create instance with script & gcloud
+
+Use shell script `./config-scripts/create-reddit-vm.sh`.
+
 ## homework 4
 
-### The main task
+### The main task. Create scripts
 
 testapp_IP = 35.234.120.58
 
 testapp_port = 9292
 
-### An additional task
+### An additional task. Create app from file or url
 
 #### Create app with startup script from file
 
@@ -56,7 +82,7 @@ This solution uses ProxyJump option.
 ssh -i .ssh/id_rsa -A -J demshin@35.198.185.22 10.156.0.3
 ```
 
-### Additional task. How to connect with alis
+### Additional task. How to connect with alias
 
 This solution uses ProxyJump option too.
 Add some configuration to ssh config.
