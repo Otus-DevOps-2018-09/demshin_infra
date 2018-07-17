@@ -55,3 +55,15 @@ resource "google_compute_firewall" "firewall_puma" {
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["reddit-app"]
 }
+
+resource "google_compute_project_metadata" "keys" {
+  metadata {
+    # appuser1 = "${file(var.public_key_path)}"
+    ssh-keys = "appuser1:${file(var.public_key_path)}"
+    ssh-keys = "appuser2:${file(var.public_key_path)}"
+    ssh-keys = "appuser3:${file(var.public_key_path)}"
+    ssh-keys = "appuser4:${file(var.public_key_path)}"
+  }
+
+  project = "${var.project}"
+}
