@@ -22,8 +22,11 @@ resource "google_compute_instance" "app" {
   tags = ["reddit-app"]
 
   network_interface {
-    network       = "default"
-    access_config = {}
+    network = "default"
+
+    access_config = {
+      nat_ip = "${google_compute_address.app_ip.address}"
+    }
   }
 
   connection {
@@ -54,6 +57,23 @@ resource "google_compute_firewall" "firewall_puma" {
 
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["reddit-app"]
+}
+
+resource "google_compute_firewall" "firewall_ssh" {
+  name        = "default-allow-ssh"
+  network     = "default"
+  description = "Allow SSH from anywhere"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+}
+
+resource "google_compute_address" "app_ip" {
+  name = "reddit-app-ip"
 }
 
 resource "google_compute_project_metadata" "keys" {
