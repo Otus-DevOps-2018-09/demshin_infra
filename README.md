@@ -6,7 +6,7 @@ demshin Infra repository
 
 ### The main task. Simple infrastructure with variables
 
-Tasks on page #49
+Tasks on page #49. Work with variables.
 
 ### An additional task. Add few keys to project metadata
 
