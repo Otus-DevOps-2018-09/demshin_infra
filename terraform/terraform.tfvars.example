@@ -1,0 +1,5 @@
+project = "name_of_project"
+public_key_path = "~/.ssh/appuser.pub"
+disk_image = "name_of_base_image"
+connection_key = "~/.ssh/appuser"
+zone = "zone"
