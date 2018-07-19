@@ -1,5 +1,5 @@
 variable project {
-  description = "infra-207602"
+  description = "Name of awesome project for Otus"
 }
 
 variable region {
@@ -21,5 +21,5 @@ variable connection_key {
 
 variable zone {
   description = "Zone"
-  default = "europe-west3-b"
+  default     = "europe-west3-b"
 }
