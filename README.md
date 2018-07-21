@@ -2,6 +2,12 @@
 
 demshin Infra repository
 
+## homework Terraform-2
+
+### The main task. Simple infrastructure using modules
+
+Create module for vpc.
+
 ## homework Terraform-1
 
 ### The main task. Simple infrastructure with variables
