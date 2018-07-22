@@ -6,7 +6,11 @@ demshin Infra repository
 
 ### The main task. Simple infrastructure using modules
 
-Create module for vpc.
+- Creating new images with Packer
+- Creating module for vpc
+- Experimenting with IP addresses
+- Creating stage & prod environments
+- Working with modules registry
 
 ## homework Terraform-1
 
