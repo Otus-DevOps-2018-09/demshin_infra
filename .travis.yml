@@ -5,11 +5,6 @@ before_install:
 - curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-09/run.sh |
   bash
 notifications:
-  email:
-    recipients:
-      - demshin@gmail.com
-    on_failure: always
-    on_success: always
   slack:
     on_failure: always
     on_success: always
