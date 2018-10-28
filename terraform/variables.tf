@@ -1,5 +1,5 @@
 variable project {
-  description = "Name of awesome project for Otus"
+  description = "Project ID"
 }
 
 variable region {
