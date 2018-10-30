@@ -115,3 +115,7 @@ And try to connect `ssh someinternalhost`.
 
 bastion_IP = 35.198.185.22
 someinternalhost_IP = 10.156.0.3
+
+## homework 2
+
+Text for test travis and slack integration.
