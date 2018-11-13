@@ -4,7 +4,7 @@ variable project {
 
 variable region {
   description = "Region"
-  default     = "europe-west3"
+  default     = "europe-north1"
 }
 
 variable public_key_path {
@@ -15,11 +15,11 @@ variable disk_image {
   description = "Disk image"
 }
 
-variable connection_key {
-  description = "Connection key for GCP"
+variable private_key_path {
+  description = "Path to the private key for connection provisioners"
 }
 
 variable zone {
   description = "Zone"
-  default     = "europe-west3-b"
+  default     = "europe-north1-c"
 }
