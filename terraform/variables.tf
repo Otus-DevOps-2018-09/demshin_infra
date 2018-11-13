@@ -7,6 +7,11 @@ variable region {
   default     = "europe-north1"
 }
 
+variable count {
+  description = "Number of instances"
+  default     = 1
+}
+
 variable public_key_path {
   description = "Path to the public key used for ssh access"
 }
