@@ -28,3 +28,8 @@ variable zone {
   description = "Zone"
   default     = "europe-north1-c"
 }
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
+}
