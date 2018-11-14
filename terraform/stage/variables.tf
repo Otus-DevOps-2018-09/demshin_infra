@@ -1,10 +1,15 @@
 variable project {
-  description = "Name of awesome project for Otus"
+  description = "Project ID"
 }
 
 variable region {
   description = "Region"
-  default     = "europe-west3"
+  default     = "europe-north1"
+}
+
+variable count {
+  description = "Number of instances"
+  default     = 1
 }
 
 variable public_key_path {
@@ -15,13 +20,13 @@ variable disk_image {
   description = "Disk image"
 }
 
-variable connection_key {
-  description = "Connection key for GCP"
+variable private_key_path {
+  description = "Path to the private key for connection provisioners"
 }
 
 variable zone {
   description = "Zone"
-  default     = "europe-west3-b"
+  default     = "europe-north1-c"
 }
 
 variable app_disk_image {
@@ -32,4 +37,9 @@ variable app_disk_image {
 variable db_disk_image {
   description = "Disk image for reddit db"
   default     = "reddit-db-base"
+}
+
+variable source_range {
+  description = "Allowed source range for vpc"
+  default     = ["0.0.0.0/0"]
 }
