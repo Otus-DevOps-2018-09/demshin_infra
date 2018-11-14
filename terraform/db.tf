@@ -19,3 +19,16 @@ resource "google_compute_instance" "db_disk_image" {
     ssh-keys = "demshin:${file(var.public_key_path)}"
   }
 }
+
+resource "google_compute_firewall" "firewall_mongo" {
+  name    = "allow-mongo-default"
+  network = "default"
+
+  allow = {
+    protocol = "tcp"
+    ports    = ["27017"]
+  }
+
+  target_tags = ["reddit-db"]
+  source_tags = ["reddit-app"]
+}
