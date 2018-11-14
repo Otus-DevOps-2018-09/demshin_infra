@@ -25,7 +25,7 @@ Tasks on page #49. Work with variables.
 
 ### An additional task. Http load balncer
 
-I'll make it later.
+Описание балансировщика для приложения в `lb.tf`, использованы `google_compute_forwarding_rule`, `google_compute_target_pool`, `google_compute_http_health_check` и параметр `count` для инстанса. Если инстансов приложения несколько, то при "падении" любого оно остается доступным.
 
 ## homework Packer
 
@@ -125,3 +125,7 @@ And try to connect `ssh someinternalhost`.
 
 bastion_IP = 35.198.185.22
 someinternalhost_IP = 10.156.0.3
+
+## homework 2
+
+Text for test travis and slack integration.
