@@ -1,7 +1,8 @@
-resource google_compute_instance app {
+resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "g1-small"
   zone         = "${var.zone}"
+  count        = "${var.count}"
   tags         = ["reddit-app"]
 
   boot_disk {
@@ -21,6 +22,22 @@ resource google_compute_instance app {
   metadata {
     ssh-keys = "demshin:${file(var.public_key_path)}"
   }
+
+  #   connection {
+  #     type        = "ssh"
+  #     user        = "demshin"
+  #     agent       = false
+  #     private_key = "${file(var.private_key_path)}"
+  #   }
+
+  #   provisioner "file" {
+  #     source      = "files/puma.service"
+  #     destination = "/tmp/puma.service"
+  #   }
+
+  #   provisioner "remote-exec" {
+  #     script = "files/deploy.sh"
+  #   }
 }
 
 resource "google_compute_address" "app_ip" {
@@ -28,8 +45,9 @@ resource "google_compute_address" "app_ip" {
 }
 
 resource "google_compute_firewall" "firewall_puma" {
-  name    = "allow-puma-default"
-  network = "default"
+  name        = "allow-puma-default"
+  description = "Allow SSH"
+  network     = "default"
 
   allow {
     protocol = "tcp"
