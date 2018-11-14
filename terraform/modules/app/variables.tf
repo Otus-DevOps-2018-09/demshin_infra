@@ -11,3 +11,8 @@ variable app_disk_image {
 variable public_key_path {
   description = "Path to the public key used for ssh access"
 }
+
+variable count {
+  description = "Number of instances"
+  default     = 1
+}
