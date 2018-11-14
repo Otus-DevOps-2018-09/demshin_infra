@@ -1,9 +1,9 @@
 project = "project_id"
 
-public_key_path = "~/.ssh/id_rsa.pub"
+public_key_path = "~/.ssh/appuser.pub"
 
 disk_image = "app-base"
 
-private_key_path = "~/.ssh/appuser.pub"
+private_key_path = "~/.ssh/appuser"
 
 zone = "zone"
