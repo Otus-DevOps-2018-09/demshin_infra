@@ -6,11 +6,8 @@ demshin Infra repository
 
 ### The main task. Simple infrastructure using modules
 
-- Creating new images with Packer
-- Creating module for vpc
-- Experimenting with IP addresses
-- Creating stage & prod environments
-- Working with modules registry
+- added options for various keys in variables.tf
+- setup starage on buckets for tfsate & tfsatte.lock
 
 ## homework Terraform-1
 
