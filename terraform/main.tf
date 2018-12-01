@@ -8,6 +8,7 @@ resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "g1-small"
   zone         = "${var.zone}"
+  count        = "${var.count}"
 
   boot_disk {
     initialize_params {
@@ -30,7 +31,7 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "demshin"
     agent       = false
-    private_key = "${file(var.connection_key)}"
+    private_key = "${file(var.public_key_path)}"
   }
 
   provisioner "file" {
@@ -58,8 +59,9 @@ resource "google_compute_firewall" "firewall_puma" {
 
 resource "google_compute_project_metadata" "keys" {
   metadata {
-    ssh-keys = "appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}appuser3:${file(var.public_key_path)}appuser4:${file(var.public_key_path)}"
+    ssh-keys = <<EOF
+appuser1${file(var.public_key_path)}
+appuser2:${file(var.public_key_path)}
+EOF
   }
-
-  project = "${var.project}"
 }
