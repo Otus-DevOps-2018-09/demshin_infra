@@ -7,7 +7,7 @@ demshin Infra repository
 ### The main task. Simple infrastructure using modules
 
 - added options for various keys in variables.tf
-- setup starage on buckets for tfsate & tfsatte.lock
+- setup starage on buckets for tfsate & tfstate.lock
 
 ## homework Terraform-1
 
