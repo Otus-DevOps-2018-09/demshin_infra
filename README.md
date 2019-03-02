@@ -17,8 +17,8 @@ Tasks on page #49. Work with variables.
 
 ### An additional task. Add few keys to project metadata
 
-Добавление ключей при помощи [google_compute_project_metadata](https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html).
-При добавлении ключа через веб-консоль GCP и последющей команде `terraform apply` добавленный ключ перезатирается.
+Adding keys with [google_compute_project_metadata](https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html).
+When you adding a key via the GCP web console and running command `terraform apply` after that added key erased.
 
 ### An additional task. Http load balncer
 
