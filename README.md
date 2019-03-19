@@ -8,6 +8,7 @@ demshin Infra repository
 
 - added options for various keys in variables.tf
 - setup starage on buckets for tfsate & tfstate.lock
+- separate environments
 
 ## homework Terraform-1
 
