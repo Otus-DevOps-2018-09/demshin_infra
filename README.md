@@ -2,6 +2,11 @@
 
 demshin Infra repository
 
+## homework Terraform-2
+
+- Separate resources on different files
+- Create modules for app, db, vpc
+
 ## homework Terraform-1
 
 ### The main task. Simple infrastructure with variables
