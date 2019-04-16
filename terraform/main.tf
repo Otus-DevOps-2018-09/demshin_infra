@@ -18,6 +18,10 @@ module "db" {
   db_disk_image   = "${var.db_disk_image}"
 }
 
+module "vpc" {
+  source = "modules/vpc"
+}
+
 # resource "google_compute_project_metadata" "keys" {
 #   metadata {
 #     ssh-keys = "appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}"
