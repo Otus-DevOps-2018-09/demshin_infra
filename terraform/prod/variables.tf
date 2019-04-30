@@ -38,3 +38,8 @@ variable "db_disk_image" {
   description = "Disk image for reddit db"
   default     = "reddit-db-base"
 }
+
+variable "source_ranges" {
+  type        = "list"
+  description = "allow access from this ip's"
+}
