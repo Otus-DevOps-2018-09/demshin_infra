@@ -6,6 +6,7 @@ demshin Infra repository
 
 - Separate resources on different files
 - Create modules for app, db, vpc
+- Add remote tfstate for prod & stage
 
 ## homework Terraform-1
 
