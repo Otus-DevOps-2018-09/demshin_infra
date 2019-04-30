@@ -8,4 +8,4 @@ private_key_path = "~/.ssh/appuser"
 
 zone = "zone"
 
-source_range = "0.0.0.0/0"
+source_range = ["0.0.0.0/0"]
