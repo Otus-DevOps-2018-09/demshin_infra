@@ -7,3 +7,5 @@ disk_image = "name_of_base_image"
 private_key_path = "~/.ssh/appuser"
 
 zone = "zone"
+
+source_range = "0.0.0.0/0"
