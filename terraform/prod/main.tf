@@ -20,7 +20,7 @@ module "db" {
 
 module "vpc" {
   source        = "../modules/vpc"
-  source_ranges = ["${var.source_range}"]
+  source_ranges = ["${var.source_ranges}"]
 }
 
 # resource "google_compute_project_metadata" "keys" {
@@ -28,4 +28,3 @@ module "vpc" {
 #     ssh-keys = "appuser1:${file(var.public_key_path)}appuser2:${file(var.public_key_path)}"
 #   }
 # }
-
