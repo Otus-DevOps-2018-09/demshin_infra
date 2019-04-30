@@ -7,7 +7,7 @@ provider "google" {
 module "storage-bucket" {
   source  = "SweetOps/storage-bucket/google"
   version = "0.1.1"
-  name    = ["demshin-storage-bucket-test", "demshin-storage-bucket-test2"]
+  name    = ["demshin-otus-tfstate"]
 }
 
 output "storage-bucket_url" {
