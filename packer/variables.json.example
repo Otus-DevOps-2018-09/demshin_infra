@@ -1,6 +1,6 @@
 {
     "project_id": "proj_id",
     "source_image_family": "ubuntu-1604-lts",
-    "disk_size": "10"
+    "disk_size": "10",
     "ssh_username": "username"
 }
