@@ -2,6 +2,14 @@
 
 demshin Infra repository
 
+## homework Ansible-1
+
+- Create `requirements.txt` & installing dependencies.
+- Create `ansible.cfg`
+- Create `inventory.yml`
+- Test ansible with basics commands
+- Create playbook `clone.yml` and test it.
+
 ## homework Terraform-2
 
 - Separate resources on different files
