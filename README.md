@@ -4,11 +4,17 @@ demshin Infra repository
 
 ## homework Ansible-1
 
+### The main task
+
 - Create `requirements.txt` & installing dependencies.
 - Create `ansible.cfg`
 - Create `inventory.yml`
 - Test ansible with basics commands
 - Create playbook `clone.yml` and test it.
+
+### An additional task. Create inventory.json
+
+- Create `get_inventory.py` for get `inventory.json`
 
 ## homework Terraform-2
 
