@@ -7,7 +7,7 @@ variable region {
   default     = "europe-north1"
 }
 
-variable count {
+variable number_instances {
   description = "Number of instances"
   default     = 1
 }
